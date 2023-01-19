@@ -23,6 +23,8 @@ jobs:
         export LICENSE=accept
         export MQSI_WORKPATH=$GITHUB_WORKSPACE/ace-minimal-image-unzip/var/mqsi
         . ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsiprofile
+    - name: Check command exists
+      run: command -v mqsipackagebar || echo "Command not found"
     - name: Build BAR files
       run: |
         mqsipackagebar -data $GITHUB_WORKSPACE/ace-projects -b $GITHUB_WORKSPACE/bar-files -a
