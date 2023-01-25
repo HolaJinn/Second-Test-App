@@ -17,7 +17,10 @@ jobs:
         registry: cp.icr.io
         username: cp
         password: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJJQk0gTWFya2V0cGxhY2UiLCJpYXQiOjE2NzQ1NzY2MDQsImp0aSI6IjE1NjIxMjg2M2M4NjQ1NmE5ZGExNWM4ZDNhYzM3YjRjIn0.Y1FjMqwaMyNIwN-LvDODWi-l2eHkmfUqpPqJWqSn0ZQ
-          
+    
+    - name: Pulling image brassomek e5dem
+      run: docker pull cp.icr.io/cp/appc/ace:12.0.7.0-r1@sha256:376b4008901f5306af3e4235a54f3b6a27e18cfe00a22cc6d673fd1d95b95231
+
     - name: Download ACE image
       run: |
         curl -so moby-download-frozen-image-v2.sh https://raw.githubusercontent.com/moby/moby/master/contrib/download-frozen-image-v2.sh
